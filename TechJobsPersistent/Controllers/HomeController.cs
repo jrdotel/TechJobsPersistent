@@ -61,10 +61,10 @@ namespace TechJobsPersistent.Controllers
 
                 context.Jobs.Add(job);
                 context.SaveChanges();
-                return Redirect("/Add/");
+                return Redirect("Index");
             }
 
-            return View(addJobViewModel);
+            return View("AddJob", addJobViewModel);
         }
 
         public IActionResult Detail(int id)
