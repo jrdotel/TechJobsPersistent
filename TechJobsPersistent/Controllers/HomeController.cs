@@ -45,7 +45,8 @@ namespace TechJobsPersistent.Controllers
                 Job job = new Job
                 {
                     Name = addJobViewModel.Name,
-                    EmployerId = addJobViewModel.EmployerId
+                    //EmployerId = addJobViewModel.EmployerId,
+                    Employer = context.Employers.Find(addJobViewModel.EmployerId)
                 };
 
                 foreach(var skill in selectedSkills)
